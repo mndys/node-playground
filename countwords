@@ -5,9 +5,11 @@ const fs = require('fs')
 function countwords(file) {
   fs.readFile(file, { encoding: 'utf-8' }, (err, data) => {
     if (err) {
-      console.log('ERROR', err)
+      console.log(chalk.red('ERROR', err))
     } else {
-      console.log('Words in ' + file + ': ' + data.split(/\s/).length)
+      console.log(
+        chalk.green('Words in ' + file + ': ' + data.split(/\s/).length)
+      )
     }
   })
 }
