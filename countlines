@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+
+function countlines(file) {
+  fs.readFile(file, { encoding: 'utf-8' }, (err, data) => {
+    if (err) {
+      console.log('ERROR', err)
+    } else {
+      console.log('Lines in ' + file + ': ' + data.split('\n').length)
+    }
+  })
+}
+
+module.exports = countlines
+
+countlines(process.argv[2])

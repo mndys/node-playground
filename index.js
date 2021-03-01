@@ -1,8 +1,5 @@
-const hello = require('./hello')
-hello()
+const countlines = require('/Users/mandy/Development/neuefische/hh-web-21-1/node-playground/countlines')
+countlines('test.txt')
 
-const random = require('./random')
-const max = Number(process.argv[2])
-console.log(random(max))
-
-// require('./hello')()
+const countwords = require('/Users/mandy/Development/neuefische/hh-web-21-1/node-playground/countwords')
+countwords('test.txt')
