@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
+const chalk = require('chalk')
 const fs = require('fs')
+const { exit } = require('process')
 
 function countwords(file) {
   fs.readFile(file, { encoding: 'utf-8' }, (err, data) => {
@@ -11,6 +13,7 @@ function countwords(file) {
         chalk.green('Words in ' + file + ': ' + data.split(/\s/).length)
       )
     }
+    exit(err ? 1 : 0)
   })
 }
 
