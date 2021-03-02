@@ -1,9 +1,3 @@
-const hello = require('./hello')
-// hello()
-
-const random = require('./random')
-const max = Number(process.argv[2])
-///console.log(random(max))
-// require('./hello')()
-const read = require('./read.js')
-read('.prettierrc')
+const addStudent = require('./addStudent.js')
+const [, , name, role] = process.argv
+addStudent({ name, role })
